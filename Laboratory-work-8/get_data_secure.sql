@@ -5,6 +5,6 @@ declare
 begin
     query_str := 'select e_id, name, salary from employer where name = $1';
     raise notice 'Query: %', query_str;
-    return query execute query_str using university_name;
+    return query execute query_str using employer_name;
 end;
 $$ language plpgsql;
